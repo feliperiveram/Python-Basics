@@ -1,2 +1,2 @@
-# Python-Basics
-Generalidades primer semestre
+# Primer-Semestre-2023
+Avances clase a clase
