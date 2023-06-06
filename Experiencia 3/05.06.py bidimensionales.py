@@ -25,4 +25,5 @@ print(arreglo.ndim)
 
 #slice -> (nombre_arreglo[::,::])
 
+print(arr)
 print(arr[3:6:,:5:])
