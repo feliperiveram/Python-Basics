@@ -29,3 +29,7 @@ print (arreglo.sum())
 
 #promedio de los valores
 print (arreglo.mean())
+
+#potencias
+arreglo **= 2
+print (arreglo)
