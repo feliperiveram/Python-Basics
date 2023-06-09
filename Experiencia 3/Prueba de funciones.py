@@ -31,4 +31,15 @@ for n in range(3):
     for m in range(3):
         print(arreglo[n][m])
 
-print(arreglo[::,:3:2])
+for n in range (3):
+    print(f"Fila número {n+1}: {arreglo[ n , : ]}")
+
+# COLUMNA VERTICAL
+for m in range (3):
+    print(f"Columna número {m+1}:\n{arreglo[  :  ,m :m+1: ]}")
+
+# COLUMNA HORIZONTAL
+for m in range (3):
+    print(f"Columna número {m+1}:\n{arreglo[  :  , m ]}")
+
+print(arreglo.size)

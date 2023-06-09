@@ -8,7 +8,7 @@ import numpy as np
 # ARREGLOS UNIDIMENSIONALES
 
 # 1) CREAR UNA MATRIZ DE CIERTA CANTIDAD DE ELEMENTOS ALEATORIOS
-# NO REQUIERE IMPORTAR LA FUNCIÓN random AL COMIENZO
+# NO REQUIERE IMPORTAR random AL COMIENZO
 # nombre_arreglo = np.random.randint(ELEMENTO INICIAL , ELEMENTO MÁXIMO (SIN INCLUIR) , size=(CANTIDAD DE ELEMENTOS DEL ARREGLO))
 
 arreglo = np.random.randint(1,101,size=(10))
@@ -97,6 +97,9 @@ lista = [i for i in range(1,11)]
 # 8.2 COPIAR Y CREAR 2 ARREGLOS INDEPENDIENTES ENTRE SÍ
 # arreglo_copia = nombre_arreglo[].copy()
 
+# 9) CREAR ARREGLOS LLENAS DE 1'S
+# nombre_arreglo = np.ones(4) -> GENERA ARREGLO DE 4 ELEMENTOS, LOS CUALES SON TODOS IGUALES A 1
+
 # ARREGLOS BIDIMENSIONALES
 
 # 1) CREACIÓN DE UN ARREGLO
@@ -107,6 +110,13 @@ nombre_arreglo = np.array( [ [0,1,2] , [3,4,5] ] )
 # 1.2 USANDO LISTAS
 # nombre_lista = [ [0,1,2] , [3,4,5] ]
 # nombre_arreglo = np.array(nombre_lista)
+
+# 1.3 MATRIZ CON ELEMENTOS ALEATORIOS
+# nombre_arreglo = np.random.randint( VALOR MÍNIMO , VALOR MÁXIMO SIN INCLUIR , size = ( VERTICAL , HORIZONTAL ))
+# NO REQUIERE IMPORTAR random
+
+nombre_arreglo = np.random.randint( 1 , 20 , size=(3,3) )
+# GENERA MATRIZ 3X3 CON ELEMENTOS ALEATORIOS QUE TOMAN LOS VALORES ENTRE 1 Y 19. PUDIENDO TOMAR EL VALOR DE 1 Y 19
 
 # 2) MOSTRAR ELEMENTO DE MATRIZ
 # nombre_arreglo[NÚMERO DE POSICIÓN EN EJE VERTICAL][NÚMERO DE POSICIÓN EN EJE HORIZONTAL]
@@ -122,6 +132,69 @@ for n in range(2):
         print(nombre_arreglo[n][m])
         
 # 4) SLICE
+
+# 4.1 USO TRADICIONAL
 # nombre_arreglo[ PARTE VERTICAL A MOSTRAR , PARTE HORIZONTALA MOSTRAR ]
 # EN PARÁMETROS VAN LAS POSICIONES (MENOS STEP)
+# SI STEP ES NEGATIVO SE INVIERTE
 # nombre_arreglo[ DESDE DONDE : HASTA DONDE (EXCLUYÉNDOLO) : STEP OPCIONAL , DESDE DONDE : HASTA DONDE (EXCLUYÉNDOLO) : STEP OPCIONAL ]
+
+# 4.2 MOSTRAR SOLO 1 FILA
+# nombre_arreglo[ POSICIÓN DE NÚMERO DE FILA A MOSTRAR , : ]
+
+nombre_arreglo[ 0 , : ]
+# MUESTRA FILA NÚMERO 1
+
+nombre_arreglo[ 0 , : ].sum()
+# MUESTRA SUMA DE LOS ELEMENTOS DE LA FILA NÚMERO 1
+
+# 4.2 MOSTRAR SOLO 1 COLUMNA EN FORMA VERTICAL
+# nombre_arreglo[  :  , m : m+1 : ]
+# COLUMNA 1 -> m = 0
+# COLUMNA 2 -> m = 1
+
+# 4.3 MOSTRAR SOLO 1 COLUMNA EN FORMA HORIZONTAL
+# nombre_arreglo[  :  , m ]
+# COLUMNA 1 -> m = 0
+# COLUMNA 2 -> m = 1
+
+# 5) MOSTRAR CANTIDAD DE ELEMENTOS
+# nombre_arreglo.size
+# EN SIZE NO SE DEBE INCLUIR '( )' (ESTARÍA MAL ESCRIBIR nombre_arreglo.size())
+
+# 6) CONCATENAR (UNIR) MATRICES
+
+# DADAS LAS MATRICES YA CREADAS nombre_arreglo_1 y nombre_arreglo_2
+
+# 6.1 EN FORMA VERTICAL (HACIA ABAJO)
+# np.concatenate (( nombre_arreglo_1 , nombre_arreglo_2 ), axis = 0 )
+
+# 6.2 EN FORMA HORIZONTAL (HACIA EL LADO)
+# np.concatenate (( nombre_arreglo_1 , nombre_arreglo_2 ), axis = 1 )
+
+# 7) SABER CARDINALIDAD DE LA MATRIZ
+# nombre_arreglo.shape
+
+# 8) GENERAR MATRIZ CON 0'S
+# nombre_arreglo = np.zeros((3,3)) -> GENERAR MATRIZ 3X3 LLENA DE CEROS
+
+# 9) GENERAR MATRIZ CON 1'S
+# nombre_arreglo = np.ones((3,3)) -> GENERAR MATRIZ 3X3 LLENA DE UNOS
+
+# 10) GENERAR MATRIZ CON DIAGONAL PRINCIPAL CON 1'S
+# nombre_arreglo = np.diag([1,1,1]) -> GENERAR MATRIZ 3X3 CON ELEMENTOS EN LA DIAGONAL PRINCIPAL IGUALES A 1. EL RESTO DE ELEMENTOS SON CEROS (0'S)
+
+# 11) LLEVAR ARREGLO UNIDIMENSIONAL A UNO BIDIMENSIONAL
+# .reshape( VERTICAL , HORIZONTAL )
+# nombre_arreglo = np.arange(1,101) -> GENERA ARREGLO UNIDIMENSIONAL CON 100 ELEMENTOS (1 AL 100)
+# nombre_arreglo = np.arange(1,101).reshape(10,10) -> GENERA ARREGLO BIDIMENSIONAL 10X10 CON 100 ELEMENTOS (1 AL 100)
+
+# 12) CREAR UNA MATRIZ QUE SELECCIONE ELEMENTOS ALEATORIOS DE UNA LISTA YA CREADA
+
+import string
+
+abecedario = list(string.ascii_lowercase)
+
+# nombre_arreglo = np.random.choice( NOMBRE DE LISTA , size=( VERTICAL , HORIZONTAL ) )
+nombre_arreglo = np.random.choice(abecedario,size=(4,4))
+# SE CREA MATRIZ 4X4 CON 16 ELEMENTOS ALEATORIOS PERTENECIENTES A LA LISTA 'abecedario'
