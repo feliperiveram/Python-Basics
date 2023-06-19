@@ -97,7 +97,7 @@ lista = [i for i in range(1,11)]
 # 8.2 COPIAR Y CREAR 2 ARREGLOS INDEPENDIENTES ENTRE SÍ
 # arreglo_copia = nombre_arreglo[].copy()
 
-# 9) CREAR ARREGLOS LLENAS DE 1'S
+# 9) CREAR ARREGLOS LLENOS DE 1'S
 # nombre_arreglo = np.ones(4) -> GENERA ARREGLO DE 4 ELEMENTOS, LOS CUALES SON TODOS IGUALES A 1
 
 # ARREGLOS BIDIMENSIONALES
@@ -201,4 +201,4 @@ nombre_arreglo = np.random.choice(abecedario,size=(4,4))
 
 # 12) Crear matriz con números reales (decimales)
 
-# arreglo = np.random.uniform(1,10,(eje_y,eje_x)) -> elementos pueden tomar el valor de 1 y 10
+# arreglo = np.random.uniform(1,10,(TAMAÑO EN eje_y,TAMAÑO EN eje_x)) -> elementos pueden tomar el valor de 1 y 10
