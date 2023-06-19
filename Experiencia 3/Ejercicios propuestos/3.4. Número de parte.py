@@ -23,7 +23,7 @@ lista_numero_parte = []
 lista_nombre_producto = []
 lista_precio_producto = []
 while menu != 4:
-    print ("¿Qué deseas realizar hoy?:\n1.- GRABAR\n2.- BUSCAR\n3.- IMPRIMIR\n4.- SALIR DEL PROGRAMA")
+    print ("¿Qué deseas realizar?:\n1.- GRABAR\n2.- BUSCAR\n3.- IMPRIMIR\n4.- SALIR DEL PROGRAMA")
     menu = input("Ingrese su opción: ")
     while type(menu) == str:
         try:
@@ -74,4 +74,4 @@ while menu != 4:
             print(f"Precio: ${lista_precio_producto[i]}.\n")
             i += 1
     else:
-        print("¡Gracias por haber usado el programa! - Felipe Rivera Versión 1.0")
+        print("¡Gracias por haber usado el programa!\nFelipe Rivera Versión 1.0")

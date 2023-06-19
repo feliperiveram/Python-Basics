@@ -198,3 +198,7 @@ abecedario = list(string.ascii_lowercase)
 # nombre_arreglo = np.random.choice( NOMBRE DE LISTA , size=( VERTICAL , HORIZONTAL ) )
 nombre_arreglo = np.random.choice(abecedario,size=(4,4))
 # SE CREA MATRIZ 4X4 CON 16 ELEMENTOS ALEATORIOS PERTENECIENTES A LA LISTA 'abecedario'
+
+# 12) Crear matriz con números reales (decimales)
+
+# arreglo = np.random.uniform(1,10,(eje_y,eje_x)) -> elementos pueden tomar el valor de 1 y 10
