@@ -202,3 +202,10 @@ nombre_arreglo = np.random.choice(abecedario,size=(4,4))
 # 12) Crear matriz con números reales (decimales)
 
 # arreglo = np.random.uniform(1,10,(TAMAÑO EN eje_y,TAMAÑO EN eje_x)) -> elementos pueden tomar el valor de 1 y 10
+
+# 13) OTROS
+
+# arreglo = np.arange(1, 43)
+# arreglo_str = [str(i).zfill(2) for i in arreglo]
+# avion_original = np.array(arreglo_str).reshape(7,6)
+# asientos_disponibles = avion_original[:].copy()
